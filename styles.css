@@ -163,6 +163,22 @@ a { color: inherit; }
 .addon-card .addon-name { color: var(--color-text); }
 .addon-card .addon-note { display: block; color: var(--color-muted); font-size: 0.82rem; font-weight: 400; }
 
+/* Ablauf-Zeitstrahl (kompakte Randleiste) */
+.ablauf-timeline { max-width: 700px; margin: 0 auto; position: relative; padding-left: 84px; }
+.ablauf-timeline::before { content: ''; position: absolute; left: 31px; top: 10px; bottom: 10px; width: 3px; background: var(--color-border); }
+.at-item { position: relative; padding-bottom: 3.2rem; }
+.at-item:last-child { padding-bottom: 0; }
+.at-node { position: absolute; left: -84px; top: 0; width: 62px; height: 62px; border-radius: 50%; background: var(--color-accent); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-family: var(--font-heading); font-size: 1.25rem; box-shadow: 0 0 0 6px var(--color-bg), var(--shadow-sm); }
+.at-time { display: inline-block; font-size: 0.78rem; font-weight: 700; color: var(--color-accent); background: rgba(217,85,43,.1); padding: 0.25rem 0.7rem; border-radius: 999px; margin-bottom: 0.6rem; }
+.at-item h2 { font-size: 1.3rem; margin: 0 0 0.5rem; }
+.at-item p { margin: 0; color: var(--color-muted); font-size: 1rem; max-width: 520px; }
+
+@media (max-width: 780px) {
+  .ablauf-timeline { padding-left: 64px; }
+  .ablauf-timeline::before { left: 23px; }
+  .at-node { left: -64px; width: 48px; height: 48px; font-size: 1.05rem; }
+}
+
 /* Scroll-reveal */
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
