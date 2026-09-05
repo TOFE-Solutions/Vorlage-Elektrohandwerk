@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{FIRMENNAME}} – {{KURZBESCHREIBUNG}}</title>
+<meta name="description" content="{{FIRMENNAME}} aus {{ORT}}: {{KURZBESCHREIBUNG}}. Jetzt unverbindlich Kontakt aufnehmen.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="logo">{{FIRMENNAME}}</a>
+    <nav class="main-nav">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#referenzen">Referenzen</a>
+      <a href="#kontakt" class="nav-cta">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section id="top" class="hero">
+  <div class="container hero-inner">
+    <h1>{{HERO_HEADLINE}}</h1>
+    <p class="hero-sub">{{HERO_SUBTEXT}}</p>
+    <a href="#kontakt" class="btn btn-primary">Kostenlos anfragen</a>
+  </div>
+</section>
+
+<section id="leistungen" class="section">
+  <div class="container">
+    <h2>Unsere Leistungen</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>{{LEISTUNG_1_TITEL}}</h3>
+        <p>{{LEISTUNG_1_TEXT}}</p>
+      </div>
+      <div class="card">
+        <h3>{{LEISTUNG_2_TITEL}}</h3>
+        <p>{{LEISTUNG_2_TEXT}}</p>
+      </div>
+      <div class="card">
+        <h3>{{LEISTUNG_3_TITEL}}</h3>
+        <p>{{LEISTUNG_3_TEXT}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ueber-uns" class="section section-alt">
+  <div class="container grid grid-2 align-center">
+    <div>
+      <h2>Über uns</h2>
+      <p>{{UEBER_UNS_TEXT}}</p>
+    </div>
+    <div class="image-placeholder">Bild: Team / Werkstatt</div>
+  </div>
+</section>
+
+<section id="referenzen" class="section">
+  <div class="container">
+    <h2>Referenzen</h2>
+    <div class="grid grid-3">
+      <div class="image-placeholder">Projekt 1</div>
+      <div class="image-placeholder">Projekt 2</div>
+      <div class="image-placeholder">Projekt 3</div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="section section-alt">
+  <div class="container grid grid-2">
+    <div>
+      <h2>Kontakt aufnehmen</h2>
+      <p>{{KONTAKT_TEXT}}</p>
+      <ul class="contact-list">
+        <li>📞 {{TELEFON}}</li>
+        <li>✉️ {{EMAIL}}</li>
+        <li>📍 {{ADRESSE}}</li>
+      </ul>
+    </div>
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+      <input type="hidden" name="access_key" value="{{WEB3FORMS_ACCESS_KEY}}">
+      <input type="hidden" name="subject" value="Neue Anfrage von {{FIRMENNAME}}-Website">
+      <label>Name<input type="text" name="name" required></label>
+      <label>E-Mail<input type="email" name="email" required></label>
+      <label>Nachricht<textarea name="message" rows="4" required></textarea></label>
+      <button type="submit" class="btn btn-primary">Absenden</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; <span id="jahr"></span> {{FIRMENNAME}} · {{ADRESSE}}</p>
+  </div>
+</footer>
+
+<script>document.getElementById('jahr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
