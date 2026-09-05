@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem('tofe-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#d9552b">
 <title>Preise &amp; Pakete – TOFE-Solutions</title>
@@ -18,6 +19,7 @@
 <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 </head>
 <body>
 
@@ -31,6 +33,14 @@
       <a href="preise.html">Preise</a>
       <a href="kontakt.html" class="nav-cta">Kontakt</a>
     </nav>
+    <label class="theme-switch" aria-label="Farbschema wechseln">
+      <input type="checkbox" id="theme-switch-input">
+      <span class="theme-switch-track">
+        <span class="icon sun">☀️</span>
+        <span class="icon moon">🌙</span>
+        <span class="theme-switch-thumb"></span>
+      </span>
+    </label>
     <button class="menu-toggle" id="menu-toggle" aria-label="Menü öffnen"><span></span></button>
   </div>
 </header>
@@ -45,6 +55,7 @@
 
 <section class="section" style="padding-top: 1rem;">
   <div class="container">
+    <h2 class="sr-only">Unsere Pakete im Detail</h2>
     <div class="grid grid-3 pricing-grid">
 
       <div class="card pricing-card reveal">
@@ -112,6 +123,70 @@
   </div>
 </section>
 
+<section class="section" id="rechner">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Preis-Rechner</span>
+      <h2>Was würde deine Website ungefähr kosten?</h2>
+      <p class="section-lead" style="margin-left:auto;margin-right:auto;">Unverbindliche Schnellschätzung – das genaue Angebot besprechen wir im Erstgespräch.</p>
+    </div>
+    <div class="calc-box reveal">
+
+      <div class="calc-row">
+        <div>
+          <label>Paket</label>
+          <span class="calc-note">Basic (799&nbsp;€) oder Premium (ab 1.119&nbsp;€ + 69&nbsp;€/Monat, inkl. SEO &amp; Betreuung)</span>
+        </div>
+        <label class="calc-switch-label">
+          <input type="checkbox" id="calc-pkg">
+          <span class="calc-switch"><span class="calc-switch-thumb"></span></span>
+        </label>
+      </div>
+
+      <div class="calc-row">
+        <div>
+          <label>Zusätzliche Unterseiten</label>
+          <span class="calc-note">über das Kontingent hinaus (je 119&nbsp;€)</span>
+        </div>
+        <div class="calc-stepper">
+          <button type="button" id="calc-pages-minus" aria-label="Weniger Unterseiten">–</button>
+          <span id="calc-pages-count">0</span>
+          <button type="button" id="calc-pages-plus" aria-label="Mehr Unterseiten">+</button>
+        </div>
+      </div>
+
+      <div class="calc-row">
+        <div>
+          <label>Content vor Ort</label>
+          <span class="calc-note">Fotos von Team, Gebäude, Equipment (149&nbsp;€)</span>
+        </div>
+        <label class="calc-switch-label">
+          <input type="checkbox" id="calc-content">
+          <span class="calc-switch"><span class="calc-switch-thumb"></span></span>
+        </label>
+      </div>
+
+      <div class="calc-row" id="calc-wartung-row">
+        <div>
+          <label>Website-Betreuung &amp; Wartung</label>
+          <span class="calc-note">nur bei Basic wählbar (69&nbsp;€/Monat)</span>
+        </div>
+        <label class="calc-switch-label">
+          <input type="checkbox" id="calc-wartung">
+          <span class="calc-switch"><span class="calc-switch-thumb"></span></span>
+        </label>
+      </div>
+
+      <div class="calc-total">
+        <span class="calc-total-label">Geschätzter Preis</span>
+        <span><span class="calc-total-value" id="calc-total-once">799 €</span> <span id="calc-total-monthly" style="font-size:0.95rem;color:var(--color-muted);"></span></span>
+      </div>
+      <p class="calc-hint">Einmalig zzgl. ggf. monatlicher Betreuung. Unverbindlich – keine automatische Bestellung.</p>
+      <a href="kontakt.html" class="btn btn-primary" style="margin-top:1rem;display:inline-block;">Passt – jetzt anfragen</a>
+    </div>
+  </div>
+</section>
+
 <section class="section section-alt">
   <div class="container">
     <div class="section-header">
@@ -138,6 +213,78 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Häufige Fragen</span>
+      <h2>Kurz &amp; ehrlich beantwortet</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">
+          <span>Wie lange dauert die Erstellung meiner Website?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>In der Regel 3–5 Werktage, sobald mir alle Inhalte (Texte, Bilder, Kontaktdaten) vorliegen. Bei größeren Premium-Projekten kann es etwas länger dauern – das bespreche ich vorab im Angebot.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">
+          <span>Muss ich meine Texte und Bilder selbst liefern?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Ja, die Inhalte zu deinem Betrieb (Texte, Fotos) lieferst du mir – niemand kennt dein Geschäft besser als du. Ich setze alles professionell um und helfe gerne beim Formulieren, wenn dir die Worte fehlen.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">
+          <span>Ich habe schon eine Domain – was passiert damit?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Deine bestehende Domain wird kostenlos an deine neue Website angebunden. Du musst nicht den Anbieter wechseln oder etwas kündigen.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">
+          <span>Ich habe noch keine Domain – geht das trotzdem?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Ja. Ich unterstütze dich bei der Registrierung einer passenden Domain (ca. 10–15&nbsp;€/Jahr direkt beim Anbieter, nicht in meinem Preis enthalten).</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">
+          <span>Kann ich meine Website später noch ändern lassen?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Klar. Bei Premium ist die laufende Betreuung bereits inklusive, bei Basic kannst du sie als Zusatzleistung für 69&nbsp;€/Monat dazubuchen – oder einzelne Änderungen individuell anfragen.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">
+          <span>Gibt es eine Mindestlaufzeit oder Abo-Zwang?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Nein. Die Website selbst ist ein einmaliger Festpreis ohne Vertragsbindung. Die optionale monatliche Betreuung ist jederzeit kündbar.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="container footer-inner">
     <p>&copy; <span id="jahr"></span> TOFE-Solutions</p>
@@ -160,6 +307,15 @@
   const mainNav = document.getElementById('main-nav');
   menuToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
   mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mainNav.classList.remove('open')));
+  const themeInput = document.getElementById('theme-switch-input');
+  if (themeInput) {
+    themeInput.checked = document.documentElement.getAttribute('data-theme') === 'dark';
+    themeInput.addEventListener('change', () => {
+      const theme = themeInput.checked ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      try { localStorage.setItem('tofe-theme', theme); } catch(e) {}
+    });
+  }
 
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
@@ -171,6 +327,92 @@
     });
   }, { threshold: 0.15 });
   revealEls.forEach(el => io.observe(el));
+
+  // Preis-Rechner
+  const calcPkg = document.getElementById('calc-pkg');
+  if (calcPkg) {
+    const calcPagesMinus = document.getElementById('calc-pages-minus');
+    const calcPagesPlus = document.getElementById('calc-pages-plus');
+    const calcPagesCount = document.getElementById('calc-pages-count');
+    const calcContent = document.getElementById('calc-content');
+    const calcWartung = document.getElementById('calc-wartung');
+    const calcWartungRow = document.getElementById('calc-wartung-row');
+    const calcTotalOnce = document.getElementById('calc-total-once');
+    const calcTotalMonthly = document.getElementById('calc-total-monthly');
+
+    const BASIC_PRICE = 799;
+    const PREMIUM_PRICE = 1119;
+    const PAGE_PRICE = 119;
+    const CONTENT_PRICE = 149;
+    const WARTUNG_PRICE = 69;
+    let pages = 0;
+
+    function formatEuro(n) {
+      return n.toLocaleString('de-DE') + ' €';
+    }
+
+    function updateCalc() {
+      const isPremium = calcPkg.checked;
+      if (calcWartungRow) calcWartungRow.style.display = isPremium ? 'none' : '';
+
+      let once = isPremium ? PREMIUM_PRICE : BASIC_PRICE;
+      once += pages * PAGE_PRICE;
+      if (calcContent.checked) once += CONTENT_PRICE;
+
+      let monthlyText = '';
+      if (isPremium) {
+        monthlyText = '+ 69 € / Monat Wartung';
+      } else if (calcWartung && calcWartung.checked) {
+        monthlyText = '+ 69 € / Monat Wartung';
+      }
+
+      calcTotalOnce.textContent = (isPremium ? 'ab ' : '') + formatEuro(once);
+      calcTotalMonthly.textContent = monthlyText;
+    }
+
+    calcPkg.addEventListener('change', updateCalc);
+    calcContent.addEventListener('change', updateCalc);
+    if (calcWartung) calcWartung.addEventListener('change', updateCalc);
+    calcPagesMinus.addEventListener('click', () => {
+      if (pages > 0) { pages--; calcPagesCount.textContent = pages; updateCalc(); }
+    });
+    calcPagesPlus.addEventListener('click', () => {
+      if (pages < 20) { pages++; calcPagesCount.textContent = pages; updateCalc(); }
+    });
+
+    updateCalc();
+  }
+
+  // FAQ-Akkordeon
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
+      const isOpen = item.classList.contains('open');
+
+      document.querySelectorAll('.faq-item.open').forEach(openItem => {
+        if (openItem !== item) {
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          openItem.querySelector('.faq-answer').style.maxHeight = null;
+        }
+      });
+
+      if (isOpen) {
+        item.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        answer.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
 </script>
+
+<a href="https://wa.me/4915731621285?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website." class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Per WhatsApp kontaktieren">
+  <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 25h60a10 10 0 0110 10v25a10 10 0 01-10 10H45l-18 15v-15h-7a10 10 0 01-10-10V35a10 10 0 0110-10z" fill="#fff"/></svg>
+</a>
 </body>
 </html>

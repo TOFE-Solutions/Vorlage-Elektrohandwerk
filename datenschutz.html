@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem('tofe-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#d9552b">
 <title>Datenschutzerklärung – TOFE-Solutions</title>
@@ -12,6 +13,7 @@
 <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 </head>
 <body class="legal">
 
@@ -25,6 +27,14 @@
       <a href="preise.html">Preise</a>
       <a href="kontakt.html" class="nav-cta">Kontakt</a>
     </nav>
+    <label class="theme-switch" aria-label="Farbschema wechseln">
+      <input type="checkbox" id="theme-switch-input">
+      <span class="theme-switch-track">
+        <span class="icon sun">☀️</span>
+        <span class="icon moon">🌙</span>
+        <span class="theme-switch-thumb"></span>
+      </span>
+    </label>
     <button class="menu-toggle" id="menu-toggle" aria-label="Menü öffnen"><span></span></button>
   </div>
 </header>
@@ -90,6 +100,19 @@
   const mainNav = document.getElementById('main-nav');
   menuToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
   mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mainNav.classList.remove('open')));
+  const themeInput = document.getElementById('theme-switch-input');
+  if (themeInput) {
+    themeInput.checked = document.documentElement.getAttribute('data-theme') === 'dark';
+    themeInput.addEventListener('change', () => {
+      const theme = themeInput.checked ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      try { localStorage.setItem('tofe-theme', theme); } catch(e) {}
+    });
+  }
 </script>
+
+<a href="https://wa.me/4915731621285?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website." class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Per WhatsApp kontaktieren">
+  <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 25h60a10 10 0 0110 10v25a10 10 0 01-10 10H45l-18 15v-15h-7a10 10 0 01-10-10V35a10 10 0 0110-10z" fill="#fff"/></svg>
+</a>
 </body>
 </html>
