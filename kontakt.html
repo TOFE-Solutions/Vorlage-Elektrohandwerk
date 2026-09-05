@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#d9552b">
+<title>Kontakt – TOFE-Solutions</title>
+<meta name="description" content="Kontaktiere TOFE-Solutions für deine individuelle Website in München. Kostenlose Erstberatung, Antwort meist innerhalb von 1-2 Werktagen.">
+<meta property="og:title" content="Kontakt – TOFE-Solutions">
+<meta property="og:description" content="Kostenlose Erstberatung für deine Website – schreib mir einfach.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://tofe-solutions.github.io/Vorlage-Elektrohandwerk/assets/og-image.jpg">
+<meta property="og:url" content="https://tofe-solutions.github.io/Vorlage-Elektrohandwerk/kontakt.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><img src="assets/logo-icon.png" alt="" width="36" height="36" class="logo-icon">TOFE-Solutions</a>
+    <nav class="main-nav" id="main-nav">
+      <a href="leistungen.html">Leistungen</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="ablauf.html">Ablauf</a>
+      <a href="preise.html">Preise</a>
+      <a href="kontakt.html" class="nav-cta">Kontakt</a>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Menü öffnen"><span></span></button>
+  </div>
+</header>
+
+<section class="hero page-hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">Kontakt</span>
+    <h1>Lass uns über deine Website sprechen</h1>
+    <p class="hero-sub">Kurze Nachricht reicht – ich melde mich meist innerhalb von 1–2 Werktagen zurück.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:1rem;">
+  <div class="container grid grid-2">
+    <div class="reveal">
+      <h2>Kontaktdaten</h2>
+      <p>Interesse an einer eigenen Website oder Fragen zu den Paketen? Schreib mir einfach – unverbindlich und ohne Verkaufsdruck.</p>
+      <ul class="contact-list">
+        <li>✉️ tobiasfeldmann@gmx.net</li>
+        <li>📍 München und Umgebung</li>
+      </ul>
+    </div>
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form reveal">
+      <input type="hidden" name="access_key" value="{{WEB3FORMS_ACCESS_KEY}}">
+      <input type="hidden" name="subject" value="Neue Anfrage über TOFE-Solutions Website">
+      <label>Name<input type="text" name="name" required></label>
+      <label>E-Mail<input type="email" name="email" required></label>
+      <label>Nachricht<textarea name="message" rows="4" required></textarea></label>
+      <button type="submit" class="btn btn-primary">Absenden</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="jahr"></span> TOFE-Solutions</p>
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('jahr').textContent = new Date().getFullYear();
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 8));
+  const menuToggle = document.getElementById('menu-toggle');
+  const mainNav = document.getElementById('main-nav');
+  menuToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
+  mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mainNav.classList.remove('open')));
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+</body>
+</html>

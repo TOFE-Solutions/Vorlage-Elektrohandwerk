@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#d9552b">
+<title>Datenschutzerklärung – TOFE-Solutions</title>
+<meta name="description" content="Datenschutzerklärung von TOFE-Solutions gemäß DSGVO.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+</head>
+<body class="legal">
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><img src="assets/logo-icon.png" alt="" width="36" height="36" class="logo-icon">TOFE-Solutions</a>
+    <nav class="main-nav" id="main-nav">
+      <a href="leistungen.html">Leistungen</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="ablauf.html">Ablauf</a>
+      <a href="preise.html">Preise</a>
+      <a href="kontakt.html" class="nav-cta">Kontakt</a>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Menü öffnen"><span></span></button>
+  </div>
+</header>
+
+<section class="hero page-hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">Rechtliches</span>
+    <h1>Datenschutzerklärung</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:760px;">
+
+    <div class="notice">
+      <strong>Hinweis (nur für dich, vor dem Live-Schalten entfernen):</strong> Diese Vorlage beschreibt die tatsächliche technische Umsetzung dieser Website (Hosting über GitHub Pages, Formular über Web3Forms, keine externen Schriftarten, keine Cookies). Sie ersetzt keine Rechtsberatung – bitte <span class="placeholder">Platzhalter</span> ausfüllen und im Zweifel prüfen lassen, besonders wenn du später Tracking, Cookies oder weitere Dienste (z. B. Google Analytics) hinzufügst – dann muss dieser Text erweitert werden.
+    </div>
+
+    <h2>1. Verantwortlicher</h2>
+    <p>
+      <span class="placeholder">Vollständiger Vor- und Nachname</span><br>
+      <span class="placeholder">Straße und Hausnummer, PLZ und Ort</span><br>
+      E-Mail: tobiasfeldmann@gmx.net
+    </p>
+
+    <h2>2. Hosting</h2>
+    <p>Diese Website wird über <strong>GitHub Pages</strong> (GitHub Inc., 88 Colin P. Kelly Jr. St, San Francisco, CA 94107, USA) gehostet. Beim Aufruf der Seite verarbeitet GitHub automatisch technische Daten wie deine IP-Adresse, Datum und Uhrzeit des Zugriffs sowie den verwendeten Browser in Server-Logs. Dies dient der technischen Bereitstellung und Absicherung der Website (Art. 6 Abs. 1 lit. f DSGVO, berechtigtes Interesse an einer funktionsfähigen und sicheren Website). Weitere Informationen: <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
+
+    <h2>3. Kontaktformular</h2>
+    <p>Wenn du das Kontaktformular nutzt, werden die von dir eingegebenen Daten (Name, E-Mail-Adresse, Nachricht) zur Bearbeitung deiner Anfrage verarbeitet (Art. 6 Abs. 1 lit. b DSGVO). Die technische Übermittlung erfolgt über den Dienst <strong>Web3Forms</strong>, der die Nachricht per E-Mail weiterleitet. Es gilt zusätzlich die Datenschutzerklärung von Web3Forms: <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">web3forms.com/privacy</a>. Deine Daten werden nicht für Werbezwecke genutzt und nur so lange gespeichert, wie es zur Bearbeitung deiner Anfrage erforderlich ist.</p>
+
+    <h2>4. Schriftarten</h2>
+    <p>Diese Website verwendet ausschließlich auf deinem Gerät bereits vorhandene Systemschriftarten. Es findet keine Verbindung zu externen Schriftarten-Anbietern statt, es werden also keine Daten an Dritte wie Google Fonts übermittelt.</p>
+
+    <h2>5. Cookies &amp; Tracking</h2>
+    <p>Diese Website setzt keine Cookies und keine Tracking- oder Analyse-Tools (z. B. Google Analytics) ein.</p>
+
+    <h2>6. Deine Rechte</h2>
+    <p>Du hast jederzeit das Recht auf Auskunft, Berichtigung, Löschung oder Einschränkung der Verarbeitung deiner personenbezogenen Daten, ein Widerspruchsrecht gegen die Verarbeitung sowie ein Recht auf Datenübertragbarkeit. Zudem hast du das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Wende dich dazu einfach an die oben genannte E-Mail-Adresse.</p>
+
+    <h2>7. Änderung dieser Datenschutzerklärung</h2>
+    <p>Diese Datenschutzerklärung wird bei Bedarf angepasst, etwa wenn neue Funktionen oder Dienste auf der Website hinzukommen. Stand: <span id="stand"></span>.</p>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="jahr"></span> TOFE-Solutions</p>
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('jahr').textContent = new Date().getFullYear();
+  document.getElementById('stand').textContent = new Date().toLocaleDateString('de-DE', {year:'numeric', month:'long'});
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 8));
+  const menuToggle = document.getElementById('menu-toggle');
+  const mainNav = document.getElementById('main-nav');
+  menuToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
+  mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mainNav.classList.remove('open')));
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#d9552b">
+<title>Über mich – TOFE-Solutions</title>
+<meta name="description" content="TOFE-Solutions ist ein persönliches Ein-Personen-Web-Studio aus München mit Fokus auf Handwerksbetriebe und Kleingewerbe. Lerne kennen, wer dahinter steckt.">
+<meta property="og:title" content="Über mich – TOFE-Solutions">
+<meta property="og:description" content="Ein persönliches Web-Studio aus München mit Fokus auf Handwerk &amp; Kleingewerbe.">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://tofe-solutions.github.io/Vorlage-Elektrohandwerk/assets/og-image.jpg">
+<meta property="og:url" content="https://tofe-solutions.github.io/Vorlage-Elektrohandwerk/ueber-mich.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><img src="assets/logo-icon.png" alt="" width="36" height="36" class="logo-icon">TOFE-Solutions</a>
+    <nav class="main-nav" id="main-nav">
+      <a href="leistungen.html">Leistungen</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="ablauf.html">Ablauf</a>
+      <a href="preise.html">Preise</a>
+      <a href="kontakt.html" class="nav-cta">Kontakt</a>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Menü öffnen"><span></span></button>
+  </div>
+</header>
+
+<section class="hero page-hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">Über mich</span>
+    <h1>Ein Mensch, keine Agentur</h1>
+    <p class="hero-sub">TOFE-Solutions ist kein großes Studio mit Wartezimmer und Kundenhotline – sondern ich, direkt erreichbar, von der ersten Nachricht bis zur fertigen Website.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid grid-2 align-center reveal">
+    <div>
+      <h2>Warum TOFE-Solutions?</h2>
+      <p>Ich habe gesehen, wie viele kleine Handwerksbetriebe und Gewerbe entweder gar keine Website haben, mit einer veralteten Baukasten-Seite leben, oder für eine einfache Online-Präsenz Summen zahlen, die für einen kleinen Betrieb kaum zu stemmen sind. TOFE-Solutions ist mein Versuch, das anders zu machen: ehrliche Festpreise, ohne versteckte Kosten, und eine Website, die wirklich zu dir passt.</p>
+      <p>Ich stehe noch am Anfang dieses Weges – und genau das nehme ich ernst: jedes Projekt bekommt meine volle Aufmerksamkeit, keine Standardlösung von der Stange und kein Callcenter, das dich zwischen Abteilungen weiterreicht.</p>
+    </div>
+    <div class="image-placeholder photo-pending"><svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor"><rect x="14" y="30" width="72" height="50" rx="8" stroke-width="5"/><circle cx="50" cy="55" r="14" stroke-width="5"/><path d="M38 30l4-8h16l4 8" stroke-width="5" stroke-linejoin="round"/></svg><span>Dein Foto folgt hier<br><small>z. B. beim Arbeiten oder ein freundliches Porträt</small></span></div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Werte</span>
+      <h2>Woran du dich bei mir orientieren kannst</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal">
+        <div class="icon">🗣️</div>
+        <h3>Ehrlich &amp; direkt</h3>
+        <p>Ich sage dir, was realistisch ist – auch wenn das mal bedeutet, von einer Idee abzuraten.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon">💡</div>
+        <h3>Transparent</h3>
+        <p>Feste Preise, klare Leistungen. Keine Überraschungen auf der Rechnung.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon">📍</div>
+        <h3>Aus München, für München</h3>
+        <p>Ich kenne die Region und ihre kleinen Betriebe – und bin bei Bedarf auch persönlich vor Ort.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="text-align:center;">
+  <div class="container">
+    <h2>Lust, mich kennenzulernen?</h2>
+    <p class="section-lead" style="margin-left:auto;margin-right:auto;">Ein kurzes, unverbindliches Gespräch reicht als erster Schritt.</p>
+    <a href="kontakt.html" class="btn btn-primary">Kontakt aufnehmen</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="jahr"></span> TOFE-Solutions</p>
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('jahr').textContent = new Date().getFullYear();
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 8));
+  const menuToggle = document.getElementById('menu-toggle');
+  const mainNav = document.getElementById('main-nav');
+  menuToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
+  mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mainNav.classList.remove('open')));
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+</body>
+</html>

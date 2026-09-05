@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tofe-solutions.github.io/Vorlage-Elektrohandwerk/sitemap.xml

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#d9552b">
+<title>Impressum – TOFE-Solutions</title>
+<meta name="description" content="Impressum von TOFE-Solutions gemäß § 5 TMG.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+</head>
+<body class="legal">
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><img src="assets/logo-icon.png" alt="" width="36" height="36" class="logo-icon">TOFE-Solutions</a>
+    <nav class="main-nav" id="main-nav">
+      <a href="leistungen.html">Leistungen</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="ablauf.html">Ablauf</a>
+      <a href="preise.html">Preise</a>
+      <a href="kontakt.html" class="nav-cta">Kontakt</a>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Menü öffnen"><span></span></button>
+  </div>
+</header>
+
+<section class="hero page-hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">Rechtliches</span>
+    <h1>Impressum</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:760px;">
+
+    <div class="notice">
+      <strong>Hinweis (nur für dich, vor dem Live-Schalten entfernen):</strong> Dies ist eine Vorlage, keine Rechtsberatung. Bitte alle <span class="placeholder">markierten Platzhalter</span> durch deine echten, korrekten Angaben ersetzen und die Angaben im Zweifel von einer Rechtsberatung oder einem Generator wie e-recht24.de gegenprüfen lassen. Ein fehlerhaftes Impressum kann in Deutschland abgemahnt werden.
+    </div>
+
+    <h2>Angaben gemäß § 5 TMG</h2>
+    <p>
+      <span class="placeholder">Vollständiger Vor- und Nachname</span><br>
+      <span class="placeholder">Straße und Hausnummer</span><br>
+      <span class="placeholder">PLZ und Ort</span>
+    </p>
+
+    <h2>Kontakt</h2>
+    <p>
+      Telefon: <span class="placeholder">Deine Telefonnummer</span><br>
+      E-Mail: tobiasfeldmann@gmx.net
+    </p>
+
+    <h2>Umsatzsteuer</h2>
+    <p>
+      <span class="placeholder">Entweder: Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE...</span><br>
+      <span class="placeholder">Oder: Gemäß § 19 UStG (Kleinunternehmerregelung) wird keine Umsatzsteuer berechnet.</span>
+    </p>
+
+    <h2>Verantwortlich für den Inhalt</h2>
+    <p><span class="placeholder">Vollständiger Vor- und Nachname (wie oben)</span></p>
+
+    <h2>Streitschlichtung</h2>
+    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a>. Ich bin nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+    <h2>Haftung für Inhalte</h2>
+    <p>Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.</p>
+
+    <h2>Haftung für Links</h2>
+    <p>Dieses Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich.</p>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="jahr"></span> TOFE-Solutions</p>
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('jahr').textContent = new Date().getFullYear();
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 8));
+  const menuToggle = document.getElementById('menu-toggle');
+  const mainNav = document.getElementById('main-nav');
+  menuToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
+  mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mainNav.classList.remove('open')));
+</script>
+</body>
+</html>

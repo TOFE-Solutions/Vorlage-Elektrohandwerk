@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#d9552b">
+<title>Seite nicht gefunden – TOFE-Solutions</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><img src="assets/logo-icon.png" alt="" width="36" height="36" class="logo-icon">TOFE-Solutions</a>
+    <nav class="main-nav" id="main-nav">
+      <a href="leistungen.html">Leistungen</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="ablauf.html">Ablauf</a>
+      <a href="preise.html">Preise</a>
+      <a href="kontakt.html" class="nav-cta">Kontakt</a>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Menü öffnen"><span></span></button>
+  </div>
+</header>
+
+<section class="section" style="padding-top:6rem; padding-bottom:6rem; text-align:center;">
+  <div class="container">
+    <span class="eyebrow">Fehler 404</span>
+    <h1 style="font-size:clamp(2rem,4vw,2.8rem);">Diese Seite gibt es nicht (mehr)</h1>
+    <p class="section-lead" style="margin-left:auto;margin-right:auto;">Der Link war fehlerhaft oder die Seite wurde verschoben. Auf der Startseite findest du alles Wichtige.</p>
+    <a href="index.html" class="btn btn-primary">Zur Startseite</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="jahr"></span> TOFE-Solutions</p>
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('jahr').textContent = new Date().getFullYear();
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 8));
+  const menuToggle = document.getElementById('menu-toggle');
+  const mainNav = document.getElementById('main-nav');
+  menuToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
+  mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mainNav.classList.remove('open')));
+</script>
+</body>
+</html>
